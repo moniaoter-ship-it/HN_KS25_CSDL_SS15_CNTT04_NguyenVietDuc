@@ -32,6 +32,15 @@ CREATE TABLE grade_log (
     FOREIGN KEY(student_id) REFERENCES students(student_id)
 );
 
+INSERT INTO students(student_id, full_name, total_debt)
+VALUES
+('SV01', 'Nguyen Van A', 7000000);
+
+INSERT INTO subjects(subject_id, subject_name, credits)
+VALUES
+('MH01', 'Co So Du Lieu', 3),
+('MH02', 'Lap Trinh Java', 4);
+
 -- CÂU 1
 DELIMITER //
 CREATE TRIGGER tg_check_score
